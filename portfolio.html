@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madhan Raj M - Full Stack Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                900: "#0c4a6e",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <a
+            href="#hero"
+            class="text-xl font-bold tracking-tight text-white hover:text-brand-500 transition"
+          >
+            Madhan<span class="text-brand-500">Raj</span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a
+              href="#about"
+              class="text-slate-300 hover:text-brand-500 transition"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-slate-300 hover:text-brand-500 transition"
+            >
+              Skills</a
+            >
+            <a
+              href="#projects"
+              class="text-slate-300 hover:text-brand-500 transition"
+              >Projects</a
+            >
+            <a
+              href="#experience"
+              class="text-slate-300 hover:text-brand-500 transition"
+              >Experience</a
+            >
+            <a
+              href="#education"
+              class="text-slate-300 hover:text-brand-500 transition"
+              >Education</a
+            >
+            <a
+              href="#contact"
+              class="text-slate-300 hover:text-brand-500 transition"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              class="text-slate-300 hover:text-white focus:outline-none p-2"
+              aria-label="Toggle Navigation"
+            >
+              <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2 text-sm"
+      >
+        <a href="#about" class="block py-2 text-slate-300 hover:text-brand-500"
+          >About</a
+        >
+        <a href="#skills" class="block py-2 text-slate-300 hover:text-brand-500"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="block py-2 text-slate-300 hover:text-brand-500"
+          >Projects</a
+        >
+        <a
+          href="#experience"
+          class="block py-2 text-slate-300 hover:text-brand-500"
+          >Experience</a
+        >
+        <a
+          href="#education"
+          class="block py-2 text-slate-300 hover:text-brand-500"
+          >Education</a
+        >
+        <a
+          href="#contact"
+          class="block py-2 text-slate-300 hover:text-brand-500"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950"
+    >
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <!-- Profile Photo -->
+        <div class="relative w-52 h-52 sm:w-64 sm:h-64 mx-auto mb-6">
+          <img
+            src="IMG.jpg.jpeg"
+            alt="Madhan Raj M"
+            onerror="
+              this.onerror = null;
+              this.src =
+                'https://ui-avatars.com/api/?name=Madhan+Raj&background=0284c7&color=fff&size=300';
+            "
+            class="w-full h-full rounded-full object-cover object-top aspect-square border-4 border-brand-500 shadow-2xl shadow-brand-500/30 ring-4 ring-slate-800"
+          />
+          <span
+            class="absolute bottom-3 right-3 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900"
+            title="Available for Opportunities"
+          ></span>
+        </div>
+
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-sm font-medium"
+        >
+          <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+          Open for Entry-Level IT Roles
+        </div>
+        <h1
+          class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight"
+        >
+          Hi, I'm
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-cyan-400"
+          >
+            Madhan Raj M
+          </span>
+        </h1>
+        <p class="text-xl sm:text-2xl font-medium text-slate-300">
+          Python Full Stack Developer
+        </p>
+        <p
+          class="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg leading-relaxed"
+        >
+          MCA graduate with hands-on experience developing end-to-end web
+          applications using Python, MySQL, JavaScript, and modern web tech.
+          Focused on building clean, efficient, and user-centric software
+          solutions.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 pt-4">
+          <a
+            href="#projects"
+            class="px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium transition shadow-lg shadow-brand-500/20"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium transition"
+          >
+            Contact Me
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 pt-6 text-slate-400">
+          <a
+            href="https://github.com/madhanraj7603"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub Profile"
+            class="hover:text-brand-500 text-2xl transition"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/madhanraj-m33"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn Profile"
+            class="hover:text-brand-500 text-2xl transition"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:madhanraj7603@gmail.com"
+            title="Send Email"
+            class="hover:text-brand-500 text-2xl transition"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a
+            href="tel:9342701704"
+            title="Call Phone"
+            class="hover:text-brand-500 text-2xl transition"
+            ><i class="fa-solid fa-phone"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60"
+    >
+      <div class="max-w-4xl mx-auto space-y-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-white">About Me</h2>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded"></div>
+        </div>
+        <p
+          class="text-slate-300 text-lg leading-relaxed text-center sm:text-left"
+        >
+          I am an MCA graduate with technical capabilities in Python, web
+          development, and database administration. My background combines
+          rigorous academic training with practical, real-world project
+          development and internship experience.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          <div
+            class="bg-slate-800/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition"
+          >
+            <i class="fa-solid fa-code text-brand-500 text-3xl mb-4"></i>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Core Development
+            </h3>
+            <p class="text-slate-400 text-sm">
+              Solid grasp of OOP, Data Structures & Algorithms, and standard
+              SDLC workflows.
+            </p>
+          </div>
+          <div
+            class="bg-slate-800/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition"
+          >
+            <i class="fa-solid fa-layer-group text-brand-500 text-3xl mb-4"></i>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Full Stack Architecture
+            </h3>
+            <p class="text-slate-400 text-sm">
+              Building responsive frontends and backend services linked directly
+              to relational and realtime databases.
+            </p>
+          </div>
+          <div
+            class="bg-slate-800/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition"
+          >
+            <i class="fa-solid fa-lightbulb text-brand-500 text-3xl mb-4"></i>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Problem Solving
+            </h3>
+            <p class="text-slate-400 text-sm">
+              Analytical approach to software logic, process automation, and
+              operational efficiency optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section
+      id="skills"
+      class="py-20 bg-slate-950 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60"
+    >
+      <div class="max-w-5xl mx-auto space-y-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-white">Technical Skills</h2>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+            <h3
+              class="text-brand-500 font-semibold mb-4 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-laptop-code"></i> Languages & Core
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >C#</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >DSA</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >OOP</span
+              >
+            </div>
+          </div>
+
+          <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+            <h3
+              class="text-brand-500 font-semibold mb-4 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-desktop"></i> Frontend Technologies
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >HTML5</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >CSS3</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >JavaScript</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Bootstrap</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >ASP.NET</span
+              >
+            </div>
+          </div>
+
+          <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+            <h3
+              class="text-brand-500 font-semibold mb-4 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-database"></i> Database Management
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >MySQL</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >SQL Server</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Firebase Realtime</span
+              >
+            </div>
+          </div>
+
+          <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+            <h3
+              class="text-brand-500 font-semibold mb-4 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Git</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >GitHub</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >VS Code</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-slate-900 p-6 rounded-xl border border-slate-800 sm:col-span-2 lg:col-span-2"
+          >
+            <h3
+              class="text-brand-500 font-semibold mb-4 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-users"></i> Soft Skills & Competencies
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Team Collaboration</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Technical Communication</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Adaptability</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-800 text-slate-300 rounded-md text-sm border border-slate-700"
+                >Software Debugging</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60"
+    >
+      <div class="max-w-5xl mx-auto space-y-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Project 1 Card -->
+          <div
+            class="bg-slate-800/40 rounded-xl border border-slate-800 overflow-hidden hover:border-brand-500/50 transition group flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="h-48 relative overflow-hidden border-b border-slate-800"
+              >
+                <img
+                  src="young-hispanic-man-ironing-clothes-laundry-room-looking-away-side-with-smile-face-natural-expression-laughing-confident.jpg"
+                  alt="Local Shifting & Laundry Project"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent p-4 flex flex-col justify-between"
+                >
+                  <div class="flex justify-between items-center">
+                    <span
+                      class="bg-brand-500/80 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded border border-brand-400/30"
+                    >
+                      <i class="fa-solid fa-server mr-1"></i> Full Stack System
+                    </span>
+                    <div class="flex space-x-2 text-white/90 drop-shadow">
+                      <i class="fa-brands fa-python text-lg"></i>
+                      <i class="fa-solid fa-database text-lg"></i>
+                      <i class="fa-brands fa-js text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-brand-400 text-xs uppercase tracking-wider font-semibold"
+                    >
+                      Web Application
+                    </h4>
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-brand-400 transition"
+                    >
+                      Local Shifting & Laundry
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Developed a full-stack web application using Python, HTML,
+                  CSS, JavaScript, Bootstrap and MySQL to streamline service
+                  booking, order tracking, and customer management.
+                </p>
+                <ul
+                  class="text-slate-400 text-sm space-y-2 list-disc list-inside"
+                >
+                  <li>
+                    Implemented staff allocation and order tracking workflows.
+                  </li>
+                  <li>
+                    Applied efficient database logic to eliminate manual
+                    operational bottlenecks.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded border border-brand-500/20"
+                  >Python</span
+                >
+                <span
+                  class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded border border-brand-500/20"
+                  >HTML/CSS</span
+                >
+                <span
+                  class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded border border-brand-500/20"
+                  >JavaScript</span
+                >
+                <span
+                  class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded border border-brand-500/20"
+                  >Bootstrap</span
+                >
+                <span
+                  class="text-xs bg-brand-500/10 text-brand-500 px-2.5 py-1 rounded border border-brand-500/20"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 Card -->
+          <div
+            class="bg-slate-800/40 rounded-xl border border-slate-800 overflow-hidden hover:border-brand-500/50 transition group flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="h-48 relative overflow-hidden border-b border-slate-800"
+              >
+                <img
+                  src="download.jpg"
+                  alt="Jewelry Shop Management Project"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent p-4 flex flex-col justify-between"
+                >
+                  <div class="flex justify-between items-center">
+                    <span
+                      class="bg-cyan-500/80 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded border border-cyan-400/30"
+                    >
+                      <i class="fa-solid fa-fire mr-1"></i> Realtime Application
+                    </span>
+                    <div class="flex space-x-2 text-white/90 drop-shadow">
+                      <i class="fa-brands fa-html5 text-lg"></i>
+                      <i class="fa-brands fa-js text-lg"></i>
+                      <i class="fa-solid fa-bolt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-cyan-400 text-xs uppercase tracking-wider font-semibold"
+                    >
+                      Retail System
+                    </h4>
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-cyan-400 transition"
+                    >
+                      Jewelry Shop Management
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  A responsive full-stack retail management solution designed
+                  for automated inventory management, billing, and record
+                  keeping.
+                </p>
+                <ul
+                  class="text-slate-400 text-sm space-y-2 list-disc list-inside"
+                >
+                  <li>
+                    Engineered real-time sales reporting and automated
+                    metal-rate sync.
+                  </li>
+                  <li>
+                    Integrated Firebase Realtime Database for instant
+                    synchronization.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-cyan-500/10 text-cyan-400 px-2.5 py-1 rounded border border-cyan-500/20"
+                  >HTML5/CSS3</span
+                >
+                <span
+                  class="text-xs bg-cyan-500/10 text-cyan-400 px-2.5 py-1 rounded border border-cyan-500/20"
+                  >JavaScript</span
+                >
+                <span
+                  class="text-xs bg-cyan-500/10 text-cyan-400 px-2.5 py-1 rounded border border-cyan-500/20"
+                  >Firebase Realtime DB</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section
+      id="experience"
+      class="py-20 bg-slate-950 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60"
+    >
+      <div class="max-w-4xl mx-auto space-y-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-white">Internship Experience</h2>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div
+          class="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-12"
+        >
+          <div class="relative pl-8">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-500 ring-4 ring-slate-950"
+            ></div>
+            <div
+              class="md:absolute md:-left-36 md:top-1 text-slate-400 text-sm font-semibold mb-2 md:mb-0"
+            >
+              01/2026 – 04/2026
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-xl border border-slate-800 space-y-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-white">
+                  Python Full Stack Development Intern
+                </h3>
+                <p class="text-brand-500 text-sm font-medium mt-1">
+                  Techvolt Software Pvt. Ltd., Coimbatore
+                </p>
+              </div>
+              <ul
+                class="text-slate-300 text-sm space-y-2 list-disc list-inside leading-relaxed"
+              >
+                <li>
+                  Contributed to dynamic web application development across
+                  full-stack layers using Python, HTML, CSS, JavaScript,
+                  Bootstrap, and MySQL.
+                </li>
+                <li>
+                  Engineered responsive, intuitive web pages and integrated
+                  relational database connections for live requirements.
+                </li>
+                <li>
+                  Participated actively across the software development
+                  lifecycle, code testing, debugging, and team collaboration.
+                </li>
+              </ul>
+              <div>
+                <button
+                  onclick="openModal('TechVolt%20Intership%20.pdf')"
+                  class="inline-flex items-center gap-2 text-xs font-semibold bg-brand-500/10 text-brand-500 hover:bg-brand-500/20 px-3 py-1.5 rounded-lg border border-brand-500/20 transition"
+                >
+                  <i class="fa-solid fa-file-pdf"></i> View Internship
+                  Certificate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section
+      id="education"
+      class="py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60"
+    >
+      <div class="max-w-5xl mx-auto space-y-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-white">
+            Education & Certifications
+          </h2>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Education -->
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap text-brand-500"></i>
+              Education
+            </h3>
+
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-slate-800 space-y-2"
+            >
+              <span
+                class="text-xs font-semibold text-brand-500 bg-brand-500/10 px-2 py-0.5 rounded"
+                >2024 – 2026</span
+              >
+              <h4 class="text-lg font-bold text-white">
+                Master of Computer Applications (MCA)
+              </h4>
+              <p class="text-slate-400 text-sm">
+                Bharathiar University, Coimbatore
+              </p>
+              <p class="text-slate-300 text-sm font-medium pt-2">
+                Academic Score:
+                <span class="text-brand-500 font-bold">75%</span>
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-slate-800 space-y-2"
+            >
+              <span
+                class="text-xs font-semibold text-brand-500 bg-brand-500/10 px-2 py-0.5 rounded"
+                >2021 – 2024</span
+              >
+              <h4 class="text-lg font-bold text-white">
+                Bachelor of Computer Applications (BCA)
+              </h4>
+              <p class="text-slate-400 text-sm">
+                Dr. N.G.P. Arts and Science College, Coimbatore
+              </p>
+              <p class="text-slate-300 text-sm font-medium pt-2">
+                Academic Score:
+                <span class="text-brand-500 font-bold">76%</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-500"></i> Verified
+              Credentials
+            </h3>
+
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-slate-800 space-y-5"
+            >
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-start gap-3">
+                  <i class="fa-solid fa-award text-brand-500 mt-1"></i>
+                  <div>
+                    <h4 class="font-bold text-white text-base">
+                      Python Full Stack Training
+                    </h4>
+                    <p class="text-slate-400 text-xs">
+                      Techvolt Software Pvt. Ltd.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onclick="openModal('TechVolt%20Training%20.pdf')"
+                  class="text-xs bg-slate-800 hover:bg-slate-700 text-brand-500 px-2.5 py-1 rounded border border-slate-700 transition"
+                >
+                  View
+                </button>
+              </div>
+
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-start gap-3">
+                  <i class="fa-solid fa-award text-brand-500 mt-1"></i>
+                  <div>
+                    <h4 class="font-bold text-white text-base">
+                      Web Development (30h Course)
+                    </h4>
+                    <p class="text-slate-400 text-xs">
+                      Dr. N.G.P Arts and Science College
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onclick="openModal('devlopement.pdf')"
+                  class="text-xs bg-slate-800 hover:bg-slate-700 text-brand-500 px-2.5 py-1 rounded border border-slate-700 transition"
+                >
+                  View
+                </button>
+              </div>
+
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-start gap-3">
+                  <i class="fa-solid fa-award text-brand-500 mt-1"></i>
+                  <div>
+                    <h4 class="font-bold text-white text-base">
+                      Intro to Internet of Things
+                    </h4>
+                    <p class="text-slate-400 text-xs">NPTEL (12-Week Course)</p>
+                  </div>
+                </div>
+                <button
+                  onclick="openModal('NPTEL%20certificate%20(2).pdf')"
+                  class="text-xs bg-slate-800 hover:bg-slate-700 text-brand-500 px-2.5 py-1 rounded border border-slate-700 transition"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20 bg-slate-950 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60"
+    >
+      <div class="max-w-4xl mx-auto space-y-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-white">Get In Touch</h2>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded"></div>
+          <p class="text-slate-400 mt-4 max-w-xl mx-auto">
+            I am actively looking for full-time opportunities and collaborative
+            projects. Feel free to reach out via phone, email, or connect with
+            me on professional networks!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+          <!-- Email -->
+          <a
+            href="mailto:madhanraj7603@gmail.com"
+            class="p-6 bg-slate-900 border border-slate-800 hover:border-brand-500/50 rounded-xl flex items-center gap-4 transition group"
+          >
+            <div
+              class="p-3 bg-brand-500/10 text-brand-500 rounded-lg group-hover:bg-brand-500 group-hover:text-white transition"
+            >
+              <i class="fa-solid fa-envelope text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 uppercase tracking-wider">
+                Email
+              </p>
+              <p class="text-white font-medium text-sm sm:text-base">
+                madhanraj7603@gmail.com
+              </p>
+            </div>
+          </a>
+
+          <!-- Phone -->
+          <a
+            href="tel:9342701704"
+            class="p-6 bg-slate-900 border border-slate-800 hover:border-brand-500/50 rounded-xl flex items-center gap-4 transition group"
+          >
+            <div
+              class="p-3 bg-brand-500/10 text-brand-500 rounded-lg group-hover:bg-brand-500 group-hover:text-white transition"
+            >
+              <i class="fa-solid fa-phone text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 uppercase tracking-wider">
+                Phone
+              </p>
+              <p class="text-white font-medium text-sm sm:text-base">
+                +91 93427 01704
+              </p>
+            </div>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/madhanraj7603"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-6 bg-slate-900 border border-slate-800 hover:border-brand-500/50 rounded-xl flex items-center gap-4 transition group"
+          >
+            <div
+              class="p-3 bg-brand-500/10 text-brand-500 rounded-lg group-hover:bg-brand-500 group-hover:text-white transition"
+            >
+              <i class="fa-brands fa-github text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 uppercase tracking-wider">
+                GitHub
+              </p>
+              <p class="text-white font-medium text-sm sm:text-base">
+                github.com/madhanraj7603
+              </p>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/madhanraj-m33"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-6 bg-slate-900 border border-slate-800 hover:border-brand-500/50 rounded-xl flex items-center gap-4 transition group"
+          >
+            <div
+              class="p-3 bg-brand-500/10 text-brand-500 rounded-lg group-hover:bg-brand-500 group-hover:text-white transition"
+            >
+              <i class="fa-brands fa-linkedin text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 uppercase tracking-wider">
+                LinkedIn
+              </p>
+              <p class="text-white font-medium text-sm sm:text-base">
+                linkedin.com/in/madhanraj-m33
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 border-t border-slate-800 text-center text-xs text-slate-500"
+    >
+      <p>&copy; 2026 Madhan Raj M. Built with Tailwind CSS.</p>
+    </footer>
+
+    <!-- Document Viewer Modal -->
+    <div
+      id="pdf-modal"
+      class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4"
+    >
+      <div
+        class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-4xl h-[80vh] flex flex-col overflow-hidden shadow-2xl"
+      >
+        <div
+          class="flex justify-between items-center p-4 border-b border-slate-800"
+        >
+          <h3 class="text-white font-semibold text-sm" id="modal-title">
+            Document Preview
+          </h3>
+          <button
+            onclick="closeModal()"
+            class="text-slate-400 hover:text-white focus:outline-none p-1"
+          >
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+        <div class="flex-1 bg-slate-950">
+          <iframe
+            id="modal-iframe"
+            class="w-full h-full border-0"
+            src=""
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile Navigation Handler
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Modal Functions for PDF/Documents
+      function openModal(filePath) {
+        const modal = document.getElementById("pdf-modal");
+        const iframe = document.getElementById("modal-iframe");
+        const title = document.getElementById("modal-title");
+
+        title.textContent = decodeURIComponent(filePath);
+        iframe.src = filePath;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("pdf-modal");
+        const iframe = document.getElementById("modal-iframe");
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        iframe.src = "";
+      }
+    </script>
+  </body>
+</html>
